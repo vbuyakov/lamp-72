@@ -7,7 +7,7 @@ Docker example with Apache, MySql 5.7, PhpMyAdmin and Php 5.7
 Before start please create `www` folder with you project file or any `index.php` For example like this:
 ```
 mkdir www
-echo "<?php phpinfo()'?>" > ./www/index.php
+echo "<?php phpinfo(); ?>" > ./www/index.php
 ```
 ### Setup mysql in PHP project
 When you configure your mysql connection in php please use `db` as `hostname` parameter. 
