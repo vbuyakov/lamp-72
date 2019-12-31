@@ -16,18 +16,16 @@ Other parameters like `user name`,  `password`, `database name` you can take fro
 Then copy your SQL dump to the `/dump` folder. It can be any file with `.sql` extension. 
 
 ### Start installation
-To init container please start
+To init container please start a command
 ```
 docker-compose up -d
 ```
+> Test a container
+- Open phpmyadmin at [`http://localhost:8000`](http://localhost:8080)
 
-Open phpmyadmin at [`http://localhost:8000`](http://localhost:8080)
+- Open web browser to look at a simple php example at [`http://localhost`](http://localhost)
 
-Open web browser to look at a simple php example at [`http://localhost`](http://localhost)
-
-Run mysql client:
-
-- `docker-compose exec db mysql -u root -p`
+- Run mysql client: `docker-compose exec db mysql -u root -p`
 
 ## Useful commands
 ```
