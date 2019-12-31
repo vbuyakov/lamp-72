@@ -1,0 +1,5 @@
+/dump/*
+!/dump/.gitkeep
+/.DS_Store
+.vscode
+/www
