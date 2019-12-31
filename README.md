@@ -2,12 +2,20 @@
 
 Docker example with Apache, MySql 5.7, PhpMyAdmin and Php 5.7
 
-Before start please create `www`  folder with any `index.php` For example like this:
+## Instalation
+### Prepare WWW folder
+Before start please create `www` folder with you project file or any `index.php` For example like this:
 ```
 mkdir www
 echo "<?php phpinfo()'?>" > ./www/index.php
 ```
+### Setup mysql in PHP project
+When you configure your mysql connection in php please use `db` as `hostname` parameter. 
+Other parameters like `user name`,  `password`, `database name` you can take from from `.env` file
 
+Then copy your SQL dump to the `/dump` folder. It can be any file with `.sql` extension. 
+
+### Start installation
 To init container please start
 ```
 docker-compose up -d
@@ -21,7 +29,7 @@ Run mysql client:
 
 - `docker-compose exec db mysql -u root -p`
 
-Enjoy !
+## Useful commands
 ```
 docker ps
 
@@ -38,7 +46,7 @@ docker volume rm $(docker volume ls -q)
 docker-compose up --build --force-recreate
 ```
 
-__#Logs__
+## Logs
 ```
 docker logs lamp-72_www_1 -f
 
@@ -46,12 +54,12 @@ docker logs lamp-72_www_1 -f > /dev/null
 
 docker logs lamp-72_www_1 -f 2> /dev/null
 ```
-__#MySQL Console__
+## MySQL Console
 ```
 docker exec -it lamp-72_db_1 mysql -u root -p
 ```
 
-__#Shell Console__
+## Shell Console
 
 ```
 docker exec -it lamp-72_www_1 bash -l
