@@ -2,7 +2,7 @@
 
 Docker example with Apache, MySql 5.7, PhpMyAdmin and Php 5.7
 
-Before start please create `www`  folder with some `index.php` For example like this.
+Before start please create `www`  folder with any `index.php` For example like this:
 ```
 mkdir www
 echo "<?php phpinfo()'?>" > ./www/index.php
